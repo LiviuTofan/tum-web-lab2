@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="promo-banner" id="firstTimePromo">
-        <div class="promo-content">
-            <span class="promo-text">Ești prima dată pe site-ul nostru? Profită de <span class="discount">-20%</span> reducere pentru prima comandă!</span>
-            <a href="#" class="promo-btn" id="promoBtn">Primește acum</a>
-        </div>
-        <span class="close-promo">&times;</span>
-    </div>
     <div class="banner">
         <img src="images/banner.png" alt="Deserturi Valea Bakery" class="banner-image">
+    </div>
+    <div class="promo-rectangle">
+        <div class="promo-rectangle-content">
+            <p class="promo-title">Prima ta comandă?</p>
+            <p class="promo-discount">-20%</p>
+            <p class="promo-desc">la orice tort.</p>
+            <a href="#" class="promo-cta" id="discountBtn">PRIMEȘTE ACUM</a>
+        </div>
     </div>
     <section class="hero">
         <div class="hero-content">
@@ -106,24 +107,32 @@
     </div>
 
     <script>
+        // Updated script to handle different button behaviors
         const popup = document.getElementById("orderPopup");
-        const btn = document.getElementById("orderBtn");
-        const discountBtn = document.getElementById("discountBtn"); // New discount button
+        const orderBtn = document.getElementById("orderBtn"); // Original "Comanda Acum" button
+        const discountBtn = document.getElementById("discountBtn"); // Promotional "Primeste Acum" button
         const closeBtn = document.getElementsByClassName("close-btn")[0];
 
-        btn.onclick = function() {
+        // For the regular "Comanda Acum" button - just show Instagram and phone
+        orderBtn.onclick = function() {
             popup.style.display = "flex";
+            
+            // Make sure no discount message is shown for regular orders
+            const existingDiscountMsg = document.querySelector('.popup-content p[style*="color: #e74c3c"]');
+            if (existingDiscountMsg) {
+                existingDiscountMsg.remove();
+            }
         }
 
-        // Add this new function for the discount button
+        // For the promotional "Primeste Acum" button - add discount text with keyword
         if (discountBtn) {
             discountBtn.onclick = function() {
                 popup.style.display = "flex";
                 
-                // Add discount message to the popup
+                // Add discount message to the popup with keyword
                 const popupContent = document.querySelector('.popup-content');
                 const discountMsg = document.createElement('p');
-                discountMsg.textContent = "Discountul tău de 20% va fi aplicat la prima comandă!";
+                discountMsg.textContent = "Discountul tău de 20% va fi aplicat la prima comandă! Spune cuvântul cheie: DULCE";
                 discountMsg.style.color = "#e74c3c";
                 discountMsg.style.fontWeight = "bold";
                 discountMsg.style.marginTop = "15px";
@@ -136,15 +145,17 @@
             }
         }
 
+        // Close button functionality remains the same
         closeBtn.onclick = function() {
             popup.style.display = "none";
         }
 
+        // Clicking outside the popup closes it
         window.onclick = function(event) {
             if (event.target == popup) {
                 popup.style.display = "none";
             }
-}
+        }
     </script>
 </body>
 </html>
