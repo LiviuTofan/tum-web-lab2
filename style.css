@@ -25,7 +25,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("images/bg.jpg");
+    background-image: url("assets/images/bg.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -274,6 +274,77 @@ h2 {
 
 .promo-cta:hover {
     background-color: #f8f8f8;
+}
+
+.gallery-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.gallery-popup-content {
+    background-color: white;
+    margin: 30px auto;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+}
+
+.close-gallery-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {

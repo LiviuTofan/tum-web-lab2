@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="banner">
-        <img src="images/banner.png" alt="Deserturi Valea Bakery" class="banner-image">
+        <img src="assets/images/banner.png" alt="Deserturi Valea Bakery" class="banner-image">
     </div>
     <div class="promo-rectangle">
         <div class="promo-rectangle-content">
@@ -23,7 +23,10 @@
         <div class="hero-content">
             <h1>Deserturi la Comandă</h1>
             <p>Ieftin, Bun și mult în Kilă</p>
-            <a href="#" class="btn" id="orderBtn">Comandă Acum</a>
+            <div class="hero-buttons">
+                <a href="#" class="btn" id="orderBtn">Comandă Acum</a>
+                <a href="#" class="btn btn-secondary" id="galleryBtn">Vezi Lucrările Efectuate</a>
+            </div>
         </div>
     </section>
 
@@ -106,14 +109,31 @@
         </div>
     </div>
 
+    <div id="galleryPopup" class="popup gallery-popup">
+        <div class="gallery-popup-content">
+            <span class="close-gallery-btn">&times;</span>
+            <h2>Lucrările Noastre</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/cakes/cake1.jpg" alt="Tort 1"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake2.jpg" alt="Tort 2"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake3.jpg" alt="Tort 3"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake4.jpg" alt="Tort 4"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake5.jpg" alt="Tort 5"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake6.jpg" alt="Tort 6"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake7.jpg" alt="Tort 7"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake8.jpg" alt="Tort 8"></div>
+                <div class="gallery-item"><img src="assets/cakes/cake9.jpg" alt="Tort 9"></div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Updated script to handle different button behaviors
+        // Order Popup variables and functions (keep your existing code)
         const popup = document.getElementById("orderPopup");
-        const orderBtn = document.getElementById("orderBtn"); // Original "Comanda Acum" button
-        const discountBtn = document.getElementById("discountBtn"); // Promotional "Primeste Acum" button
+        const orderBtn = document.getElementById("orderBtn");
+        const discountBtn = document.getElementById("discountBtn");
         const closeBtn = document.getElementsByClassName("close-btn")[0];
 
-        // For the regular "Comanda Acum" button - just show Instagram and phone
         orderBtn.onclick = function() {
             popup.style.display = "flex";
             
@@ -145,15 +165,30 @@
             }
         }
 
-        // Close button functionality remains the same
         closeBtn.onclick = function() {
             popup.style.display = "none";
         }
 
-        // Clicking outside the popup closes it
+        // Gallery Popup functionality
+        const galleryPopup = document.getElementById("galleryPopup");
+        const galleryBtn = document.getElementById("galleryBtn");
+        const closeGalleryBtn = document.getElementsByClassName("close-gallery-btn")[0];
+
+        galleryBtn.onclick = function() {
+            galleryPopup.style.display = "flex";
+        }
+
+        closeGalleryBtn.onclick = function() {
+            galleryPopup.style.display = "none";
+        }
+
+        // Close both popups when clicking outside
         window.onclick = function(event) {
             if (event.target == popup) {
                 popup.style.display = "none";
+            }
+            if (event.target == galleryPopup) {
+                galleryPopup.style.display = "none";
             }
         }
     </script>
