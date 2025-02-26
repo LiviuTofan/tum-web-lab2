@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="promo-banner" id="firstTimePromo">
+        <div class="promo-content">
+            <span class="promo-text">Ești prima dată pe site-ul nostru? Profită de <span class="discount">-20%</span> reducere pentru prima comandă!</span>
+            <a href="#" class="promo-btn" id="promoBtn">Primește acum</a>
+        </div>
+        <span class="close-promo">&times;</span>
+    </div>
     <div class="banner">
         <img src="images/banner.png" alt="Deserturi Valea Bakery" class="banner-image">
     </div>
@@ -101,12 +108,34 @@
     <script>
         const popup = document.getElementById("orderPopup");
         const btn = document.getElementById("orderBtn");
+        const discountBtn = document.getElementById("discountBtn"); // New discount button
         const closeBtn = document.getElementsByClassName("close-btn")[0];
-        
+
         btn.onclick = function() {
             popup.style.display = "flex";
         }
-        
+
+        // Add this new function for the discount button
+        if (discountBtn) {
+            discountBtn.onclick = function() {
+                popup.style.display = "flex";
+                
+                // Add discount message to the popup
+                const popupContent = document.querySelector('.popup-content');
+                const discountMsg = document.createElement('p');
+                discountMsg.textContent = "Discountul tău de 20% va fi aplicat la prima comandă!";
+                discountMsg.style.color = "#e74c3c";
+                discountMsg.style.fontWeight = "bold";
+                discountMsg.style.marginTop = "15px";
+                discountMsg.style.textAlign = "center";
+                
+                // Only add the message if it doesn't already exist
+                if (!document.querySelector('.popup-content p[style*="color: #e74c3c"]')) {
+                    popupContent.appendChild(discountMsg);
+                }
+            }
+        }
+
         closeBtn.onclick = function() {
             popup.style.display = "none";
         }
@@ -115,7 +144,7 @@
             if (event.target == popup) {
                 popup.style.display = "none";
             }
-        }
+}
     </script>
 </body>
 </html>

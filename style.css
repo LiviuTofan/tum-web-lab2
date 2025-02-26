@@ -227,6 +227,58 @@ h2 {
     color: #4CAF50;
 }
 
+.promo-banner {
+    width: 100%;
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.promo-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.discount {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: white;
+    color: #e74c3c;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+.promo-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: white;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.promo-btn:hover {
+    background-color: #f8f8f8;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .hero-content {
@@ -247,5 +299,11 @@ h2 {
     
     .review-card {
         max-width: 100%;
+    }
+
+    .promo-content {
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px 0;
     }
 }
