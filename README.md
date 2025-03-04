@@ -32,6 +32,15 @@ The project is focused on delivering a modern and engaging user experience using
 - A **popup-based image gallery** showcasing custom cakes.
 - High-quality images arranged in a responsive grid.
 
+### 2.7 Mascot
+- A small, cute pink brownie character.
+- Displays a welcome message to visitors.
+
+### 2.8 Responsiveness
+- Ensures a great user experience on both PC and mobile.
+- PC View: Well-structured layout with spacious content sections.
+- Mobile View: Optimized for small screens with readable text and touch-friendly buttons.
+
 ## 3. Technologies Used
 - **HTML5** - Structure of the landing page.
 - **CSS3** - Styling and responsiveness.
@@ -42,8 +51,8 @@ The project is focused on delivering a modern and engaging user experience using
 ### Main Page
 ![Main Page](assets/screenshots/page.png)
 
-### Promotional Discount
-![Promo Discount](assets/screenshots/promotion.png)
+### Mobile View with Promotional Sale and Mascot
+![Promo Discount](assets/screenshots/mobile.png)
 
 ### Customer Reviews
 ![Customer Reviews](assets/screenshots/reviews.png)
