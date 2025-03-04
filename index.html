@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Deserturi la Comanda</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -19,14 +19,20 @@
             <div class="hero-buttons">
                 <a href="#gallery" class="btn">Vezi Lucrările Noastre</a>
             </div>
-            <div class="contact-info">
-                <a href="https://www.instagram.com/Valea_bakery?igsh=MXNmZnV4dnhsMWxzMA==" target="_blank" class="contact-link">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="tel:+373 68686868" class="contact-link">
-                    <i class="fas fa-phone"></i> +373 68686868
-                </a>
-            </div>
+                <div class="contact-info">
+                    <!-- PC View: Only Instagram -->
+                    <a href="https://www.instagram.com/Valea_bakery?igsh=MXNmZnV4dnhsMWxzMA==" target="_blank" class="contact-link contact-pc contact-instagram">
+                        <i class="fab fa-instagram"></i> valea_bakery
+                    </a>
+                    
+                    <!-- Mobile View: Both Instagram and Phone -->
+                    <a href="https://www.instagram.com/Valea_bakery?igsh=MXNmZnV4dnhsMWxzMA==" target="_blank" class="contact-link contact-mobile contact-instagram">
+                        <i class="fab fa-instagram"></i> valea_bakery
+                    </a>
+                    <a href="tel:+373 68686868" class="contact-link contact-mobile contact-phone">
+                        <i class="fas fa-phone"></i> +373 68686868
+                    </a>
+                </div>
         </div>
     </section>
     
@@ -91,6 +97,20 @@
         </div>
     </section>
 
+    <!-- Mobile-Only Section -->
+    <section class="mobile-promo mobile-only">
+        <div class="container">
+            <h2 class="mobile-section-title">Comandă Ușor de pe Mobil</h2>
+            <div class="mobile-cta-content">
+                <img src="assets/images/mobile-order.png" alt="Comandă de pe Mobil" class="mobile-promo-image">
+                <div class="mobile-cta-text">
+                    <p>Simplu și rapid! Comandă direct de pe telefonul tău în doar câțiva pași.</p>
+                    <a href="tel:+373 68686868" class="btn btn-mobile-cta">Sună Acum</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="gallery" class="gallery-section">
         <div class="container">
             <h2>Lucrările Noastre</h2>
@@ -104,20 +124,6 @@
                 <div class="gallery-item"><img src="assets/cakes/cake7.jpg" alt="Tort 7"></div>
                 <div class="gallery-item"><img src="assets/cakes/cake8.jpg" alt="Tort 8"></div>
                 <div class="gallery-item"><img src="assets/cakes/cake9.jpg" alt="Tort 9"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Mobile-Only Section -->
-    <section class="mobile-promo mobile-only">
-        <div class="container">
-            <h2 class="mobile-section-title">Comandă Ușor de pe Mobil</h2>
-            <div class="mobile-cta-content">
-                <img src="assets/images/mobile-order.png" alt="Comandă de pe Mobil" class="mobile-promo-image">
-                <div class="mobile-cta-text">
-                    <p>Simplu și rapid! Comandă direct de pe telefonul tău în doar câțiva pași.</p>
-                    <a href="tel:+373 68686868" class="btn btn-mobile-cta">Sună Acum</a>
-                </div>
             </div>
         </div>
     </section>

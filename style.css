@@ -240,8 +240,54 @@ p {
     display: none;
 }
 
+/* Desktop View */
+@media (min-width: 769px) {
+    .contact-mobile {
+        display: none !important;
+    }
+    
+    .contact-pc {
+        display: flex !important;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .contact-pc {
+        display: none !important;
+    }
+    
+    .contact-mobile {
+        display: flex !important;
+    }
+    
+    .hero .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .hero .contact-link {
+        width: 70%;
+        justify-content: center;
+    }
+}
+
 /* Mobile Promo Section */
 @media (max-width: 768px) {
+    /* Mobile Contact Links */
+    .hero .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero .contact-link {
+        width: 70%; /* Make links wider on mobile */
+        justify-content: center;
+    }
+
+    /* Mobile-Only Section */
     .mobile-only {
         display: block;
     }
@@ -295,10 +341,8 @@ p {
     .btn-mobile-cta:hover {
         background-color: #45a049;
     }
-}
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+    /* Gallery Responsive */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -306,50 +350,24 @@ p {
     .gallery-section h2 {
         font-size: 2.5rem;
     }
-}
 
-@media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-section h2 {
-        font-size: 2rem;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
+    /* Hero Section Responsive */
     .hero {
         height: 100vh;
     }
 
     .hero-content {
         padding: 1rem;
-        width: 90%; /* 90% of the parent container */
+        width: 90%;
         margin: 0 auto;
     }
 
-    .hero .contact-info {
-        flex-direction: column;
-        gap: 1rem;
+    h1 {
+        font-size: 2.2rem;
     }
 
-    .hero .contact-link {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+    p {
+        font-size: 1.2rem;
     }
 
     .reviews {
@@ -360,5 +378,31 @@ p {
     .review-card {
         width: 100%;
         margin-bottom: 1rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-section h2 {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
     }
 }
