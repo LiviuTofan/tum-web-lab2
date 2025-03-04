@@ -196,11 +196,10 @@ p {
     text-align: right;
 }
 
-/* Gallery Section Styling */
 .gallery-section h2 {
     text-align: center;
     font-size: 3rem;
-    color: #ff69b4; /* Bright pink color */
+    color: #ff69b4;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: bold;
@@ -264,7 +263,7 @@ p {
 
 .mobile-promo-content .text {
     font-size: 1rem;
-    margin-top: -5px; /* Tighten up the spacing */
+    margin-top: -5px;
 }
 
 /* Ensure it's only visible on mobile */
@@ -317,11 +316,10 @@ p {
     }
 
     .hero .contact-link {
-        width: 70%; /* Make links wider on mobile */
+        width: 70%;
         justify-content: center;
     }
 
-    /* Mobile-Only Section */
     .mobile-only {
         display: block;
     }
