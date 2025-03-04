@@ -240,6 +240,40 @@ p {
     display: none;
 }
 
+/* Mobile Promo Banner */
+.mobile-promo-banner {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    z-index: 10;
+}
+
+.mobile-promo-content {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mobile-promo-content .discount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.mobile-promo-content .text {
+    font-size: 1rem;
+    margin-top: -5px; /* Tighten up the spacing */
+}
+
+/* Ensure it's only visible on mobile */
+@media (min-width: 769px) {
+    .mobile-promo-banner {
+        display: none !important;
+    }
+}
+
 /* Desktop View */
 @media (min-width: 769px) {
     .contact-mobile {
