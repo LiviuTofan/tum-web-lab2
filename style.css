@@ -196,50 +196,6 @@ p {
     text-align: right;
 }
 
-/* Gallery Section Styling */
-.gallery-section h2 {
-    text-align: center;
-    font-size: 3rem;
-    color: #ff69b4; /* Bright pink color */
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.gallery-item {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.mobile-only {
-    display: none;
-}
-
 /* Mobile Promo Banner */
 .mobile-promo-banner {
     position: absolute;
