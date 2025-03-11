@@ -358,14 +358,6 @@ p {
         background-color: #45a049;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .gallery-section h2 {
-        font-size: 2.5rem;
-    }
-
     .hero {
         height: 100vh;
     }
@@ -387,13 +379,6 @@ p {
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-section h2 {
-        font-size: 2rem;
-    }
 
     h1 {
         font-size: 2rem;
